@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Test-->
-<!--Test-->
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +9,7 @@
         body {
             font-family: 'Arial', sans-serif;
             font-size: 12px;
-            line-height: 1.5;
+            line-height: 1.2;
             margin: 0;
             padding: 0;
         }
@@ -20,14 +18,10 @@
             width: 210mm;
             height: 297mm;
             margin: auto;
-            padding: 20mm;
+            padding: 15mm;
             box-sizing: border-box;
             border: 1px solid #ccc;
             page-break-after: always;
-        }
-
-        .pageSection {
-            display: flex;
         }
 
         h1,
@@ -43,18 +37,23 @@
         }
 
         h2 {
-            font-size: 16px;
+            font-size: 12px;
         }
 
         p {
-            margin: 5px 0;
+            text-indent: 10px;
+        }
+
+        .pageSection {
+            display: flex;
         }
 
         .section {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         .sideSection {
+            width: 220mm;
             border: 1px solid #ccc;
             margin: 0 3mm 0 0;
             padding: 0 5mm 0 0;
@@ -76,6 +75,15 @@
         .header {
             display: block;
         }
+
+        .inlineText {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        h5 {
+            margin-left: 2mm;
+        }
     </style>
 </head>
 
@@ -88,7 +96,7 @@
                 <p id="phone"></p>
                 <p id="email"></p>
                 <div class="section">
-                    <h2 id="professionalProfile">פרופיל מקצועי</h2>
+                    <h2 id="professionalProfile"></h2>
                     <p id="professionalProfileDescription"></p>
                 </div>
             </div>
@@ -96,18 +104,50 @@
 
         <div class="pageSection">
             <div class="mainSection">
-
                 <div class="section">
                     <h2>🏫 EDUCATION</h2>
                     <div class="section-content">
+                        <p class="job-title" id="education_2_institution"></p>
+                        <p class="inlineText">
+                            <span>Period:</span>
+                            <span id="education_2_period" style="margin-left: 2mm;"></span>
+                        </p>
+                        <p class="inlineText">
+                            <span>Diplom:</span>
+                            <span id="education_2_diplom" style="margin-left: 2mm;"></span>
+                        </p>
+                        <p class="inlineText">
+                            <span>Degree:</span>
+                            <span id="education_2_degree" style="margin-left: 2mm;"></span>
+                        </p>
+                        <p class="description" id="education_2_description"></p>
+                    </div>
+                    <div class="section-content">
+                        <h3 class="job-title">My Projects:</h3>
+                        <p><a href="https://github.com/AlexanderVa-oss">GitHub</a></p>
+                        <p><a href="https://alexanderva-oss.github.io/hackeruPortfolio/">My portfolio</a></p>
+                        <p>Also i still work on my own web site. In privete repository</p>
+                    </div>
+                    <div class="section-content">
                         <p class="job-title" id="education_1_institution"></p>
-                        <p id="education_1_period"></p>
-                        <p class="description" id="education_1_degree"></p>
+                        <p class="inlineText">
+                            <span>Period:</span>
+                            <span id="education_1_period" style="margin-left: 2mm;"></span>
+                        </p>
+                        <p class="inlineText">
+                            <span>Diplom:</span>
+                            <span id="education_1_diplom" style="margin-left: 2mm;"></span>
+                        </p>
+                        <p class="inlineText">
+                            <span>Degree:</span>
+                            <span id="education_1_degree" style="margin-left: 2mm;"></span>
+                        </p>
+                        <p class="description" id="education_1_description"></p>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h2>💼 ניסיון תעסוקתי</h2>
+                    <h2>💼 EMPLOYMENT HISTORY</h2>
                     <div class="section-content">
                         <p class="job-title" id="work_experience_1_company"></p>
                         <p id="work_experience_1_period"></p>
@@ -116,21 +156,6 @@
                         <p class="job-title" id="work_experience_2_company"></p>
                         <p id="work_experience_2_period"></p>
                         <p class="description" id="work_experience_2_description_integration"></p>
-                        <p class="description" id="work_experience_2_description_mechanical_calibration"></p>
-                        <p class="description" id="work_experience_2_description_software_calibration"></p>
-                        <p class="description" id="work_experience_2_description_hydraulic_pneumatic_systems"></p>
-                        <p class="description" id="work_experience_2_description_electrical_calibration"></p>
-                        <p class="description" id="work_experience_2_description_control_components_calibration"></p>
-                        <p class="description" id="work_experience_2_description_software_testing"></p>
-                        <p class="description" id="work_experience_2_description_safety_testing"></p>
-                        <p class="description" id="work_experience_2_description_fat_preparation"></p>
-                        <p class="description" id="work_experience_2_description_fat_testing"></p>
-                        <p class="description" id="work_experience_2_description_sat_preparation"></p>
-                        <p class="description" id="work_experience_2_description_sat_testing"></p>
-                        <p class="description" id="work_experience_2_description_atp_testing"></p>
-                        <p class="description" id="work_experience_2_description_machine_installation"></p>
-                        <p class="description" id="work_experience_2_description_system_upgrade"></p>
-                        <p class="description" id="work_experience_2_description_customer_training_support"></p>
 
                         <p class="job-title" id="work_experience_3_company"></p>
                         <p id="work_experience_3_period"></p>
@@ -141,18 +166,17 @@
             </div>
 
             <div class="sideSection">
-
                 <div class="section">
-                    <h2>📚 שפות</h2>
-                    <div class="section-content">
-                        <p class="description" id="languages_russian"></p>
-                        <p class="description" id="languages_hebrew"></p>
-                        <p class="description" id="languages_english"></p>
+                    <h3>📚 languages</h3>
+                    <div class='description'>
+                        <h5 id="languages_russian"></h5>
+                        <h5 id="languages_hebrew"></h5>
+                        <h5 id="languages_english"></h5>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h2>🪖 שירות צבאי</h2>
+                    <h3>🪖 Military service</h3>
                     <div class="section-content">
                         <p class="job-title" id="military_service_1_unit"></p>
                         <p class="description" id="military_service_1_period"></p>
@@ -164,7 +188,7 @@
                     </div>
                 </div>
                 <div class="section">
-                    <h2>⚙️ ידע נוסף</h2>
+                    <h3>⚙️ Other skills</h3>
                     <div class="section-content">
                         <p class="description" id="programOfices"></p>
                         <p class="description" id="programSolid"></p>
@@ -191,70 +215,62 @@
             work_experience: [
                 {
                     company: "Utron",
-                    period: "מרץ 2024 - יוני 2024",
-                    description: "תמיכה לתקופת שלושה חודשים בפיתוח קרוניות אוטומטיות"
+                    period: "Match 2024 - Junny 2024",
+                    description: "Support for a period of three months in the development of automatic trailers"
                 },
                 {
-                    company: "שמש אוטומציה",
-                    period: "2018 - 2023",
-                    description: {
-                        integration: "אינטגרציה: אינטגרציית מכונות בקווי ייצור, אם זה מכונות בפיתוח של החברה ואם זה מכונות קנויות",
-                        mechanical_calibration: "ביצוע כיולים מכניים למכונות שונות בקו יצור",
-                        software_calibration: "ביצוע כיולים תוכנתיים למכונות שונות בקו יצור",
-                        hydraulic_pneumatic_systems: "כיול, פיתוח ותכנון של מערכות הידראוליות ופנאומטיות",
-                        electrical_calibration: "ביצוע כיול רכיבים חשמליים",
-                        control_components_calibration: "ביצוע כיול של רכיבי בקרה ובדיקתם",
-                        software_testing: "ביצוע בדיקות תוכנה",
-                        safety_testing: "ביצוע בדיקות בטיחות",
-                        fat_preparation: "הכנה של מכונה/קו יצור ל FAT",
-                        fat_testing: "ביצוע בדיקות FAT",
-                        sat_preparation: "הכנה של מכונה/קו יצור ל SAT",
-                        sat_testing: "ביצוע בדיקות SAT",
-                        atp_testing: "ביצוע ATP",
-                        machine_installation: "התקנה של מכונות/קו יצור אצל לקוח אם זה בארץ ואם זה בחו\"ל",
-                        system_upgrade: "שדרוג מערכות אם זה ברצפת ייצור ואם זה אצל לקוח",
-                        customer_training_support: "הדרכת לקוח ותמיכה טכנית"
-                    }
+                    company: "Shemesh Automation",
+                    period: "July 2018 - 2023 July",
+                    description:
+                        "In my role within the industrial machinery development environment, I specialized in delivering final products tailored to meet client specifications and deadlines. Responsibilities encompassed identifying and resolving development issues, ensuring the seamless operation and maintenance of products post-deployment. Proactive approach to troubleshooting and commitment to excellence have been pivotal in maintaining high standards of product quality and client satisfaction."
                 },
                 {
                     company: "FLEX",
                     period: "2016 - 2018",
-                    description: {
-                        development_team_work: "עבודה מול צוות פיתוח",
-                        assembly_process_writing: "כתיבת תהליכי הרכבה"
-                    }
+                    description: "Working with a development team and writing assembly processes"
                 }
             ],
-            education: [
-                {
-                    institution: "הנדסאי מכונות",
-                    period: "2015 - 2018",
-                    degree: "בעל תאודת הנדסאי מכונות מכטרוניקה"
-                }
-            ],
+            educationORT:
+            {
+                institution: "Ort Rehovot",
+                period: "2015 - 2018",
+                diplom: "Mechanical Engenering",
+                degree: "Mechanical engineer certificate holder.",
+                description: ""
+            },
+            educationHackerU:
+            {
+                institution: "HackerU, Ramat-Gan",
+                period: "July 2023 - Marrch 2024",
+                diplom: "Web Developer",
+                degree: "98",
+                description: "My academic journey at HackerU has been an intensive and enriching experience, focusing on cutting- edge technologies and programming languages.I have honed my skills in JavaScript, NodeJS, React, HTML, CSS, Bootstrap, WordPress, and MUI through rigorous coursework.My portfolio, showcasing multiple projects, is a testament to my practical application of these skills(Check my projects below).With a GPA of 98, my academic record reflects my dedication and mastery in the field of technology."
+            },
             military_service: [
                 {
-                    unit: "890 צנחנים",
+                    unit: "Paratroopers unit 890",
                     period: "2011 - 2008",
-                    service_type: "שירות קבע"
+                    service_type: "permanent service"
                 },
                 {
-                    unit: "890 צנחנים",
+                    unit: "Paratroopers unit 890",
                     period: "2008 - 2005",
-                    service_type: "שירות סדיר"
+                    service_type: "regular service"
                 }
             ],
             languages: {
-                russian: "רוסית: שפת אם",
-                hebrew: "עברית: ברמת שפת אם",
-                english: "אנגלית: בינונית"
+                russian: 'Russian: Native speaker',
+                hebrew: "Hebrew: Fluent",
+                english: "English: average, including technical"
             },
+            programming: 'programming',
+            programmingSkills: [
+                "JavaScript",
+                "HTML",
+            ],
             anotherSkills: {
                 programSolid: "SolidWorks",
                 programOfices: "Microsoft Office",
-                programming: 'תכנות',
-                codingJavaScript: "JavaScript",
-                codingHTML: "HTML"
             },
         };
 
@@ -262,6 +278,18 @@
         document.getElementById('location').innerHTML = data.contact.location;
         document.getElementById('phone').innerHTML = data.contact.phone;
         document.getElementById('email').innerHTML = data.contact.email;
+
+        document.getElementById('education_1_institution').innerHTML = data.educationORT.institution;
+        document.getElementById('education_1_period').innerHTML = data.educationORT.period;
+        document.getElementById('education_1_diplom').innerHTML = data.educationORT.diplom;
+        document.getElementById('education_1_degree').innerHTML = data.educationORT.degree;
+        document.getElementById('education_1_description').innerHTML = data.educationORT.description;
+
+        document.getElementById('education_2_institution').innerHTML = data.educationHackerU.institution;
+        document.getElementById('education_2_period').innerHTML = data.educationHackerU.period;
+        document.getElementById('education_2_diplom').innerHTML = data.educationHackerU.diplom;
+        document.getElementById('education_2_degree').innerHTML = data.educationHackerU.degree;
+        document.getElementById('education_2_description').innerHTML = data.educationHackerU.description;
 
         document.getElementById('professionalProfile').innerHTML = `📋 ${data.professionalProfile.professionalProfile}`;
         document.getElementById('professionalProfileDescription').innerHTML = data.professionalProfile.professionalProfileDescription;
@@ -272,31 +300,11 @@
 
         document.getElementById('work_experience_2_company').innerHTML = data.work_experience[1].company;
         document.getElementById('work_experience_2_period').innerHTML = data.work_experience[1].period;
-        document.getElementById('work_experience_2_description_integration').innerHTML = `${data.work_experience[1].description.integration}`;
-        document.getElementById('work_experience_2_description_mechanical_calibration').innerHTML = `◉ ${data.work_experience[1].description.mechanical_calibration}`;
-        document.getElementById('work_experience_2_description_software_calibration').innerHTML = `◉ ${data.work_experience[1].description.software_calibration}`;
-        document.getElementById('work_experience_2_description_hydraulic_pneumatic_systems').innerHTML = `◉ ${data.work_experience[1].description.hydraulic_pneumatic_systems}`;
-        document.getElementById('work_experience_2_description_electrical_calibration').innerHTML = `◉ ${data.work_experience[1].description.electrical_calibration}`;
-        document.getElementById('work_experience_2_description_control_components_calibration').innerHTML = `◉  ${data.work_experience[1].description.control_components_calibration}`;
-        document.getElementById('work_experience_2_description_software_testing').innerHTML = `◉ ${data.work_experience[1].description.software_testing}`;
-        document.getElementById('work_experience_2_description_safety_testing').innerHTML = `◉  ${data.work_experience[1].description.safety_testing}`;
-        document.getElementById('work_experience_2_description_fat_preparation').innerHTML = `◉ ${data.work_experience[1].description.fat_preparation}`;
-        document.getElementById('work_experience_2_description_fat_testing').innerHTML = `◉ ${data.work_experience[1].description.fat_testing}`;
-        document.getElementById('work_experience_2_description_sat_preparation').innerHTML = `◉ ${data.work_experience[1].description.sat_preparation}`;
-        document.getElementById('work_experience_2_description_sat_testing').innerHTML = `◉  ${data.work_experience[1].description.sat_testing}`;
-        document.getElementById('work_experience_2_description_atp_testing').innerHTML = `◉ ${data.work_experience[1].description.atp_testing}`;
-        document.getElementById('work_experience_2_description_machine_installation').innerHTML = `◉ ${data.work_experience[1].description.machine_installation}`;
-        document.getElementById('work_experience_2_description_system_upgrade').innerHTML = `◉ ${data.work_experience[1].description.system_upgrade}`;
-        document.getElementById('work_experience_2_description_customer_training_support').innerHTML = `◉  ${data.work_experience[1].description.customer_training_support}`;
+        document.getElementById('work_experience_2_description_integration').innerHTML = `${data.work_experience[1].description}`;
 
         document.getElementById('work_experience_3_company').innerHTML = data.work_experience[2].company;
         document.getElementById('work_experience_3_period').innerHTML = data.work_experience[2].period;
-        document.getElementById('work_experience_3_description_development_team_work').innerHTML = `◉ ${data.work_experience[2].description.development_team_work}`;
-        document.getElementById('work_experience_3_description_assembly_process_writing').innerHTML = `◉ ${data.work_experience[2].description.assembly_process_writing}`;
-
-        document.getElementById('education_1_institution').innerHTML = data.education[0].institution;
-        document.getElementById('education_1_period').innerHTML = data.education[0].period;
-        document.getElementById('education_1_degree').innerHTML = data.education[0].degree;
+        document.getElementById('work_experience_3_description_development_team_work').innerHTML = `◉ ${data.work_experience[2].description}`;
 
         document.getElementById('military_service_1_unit').innerHTML = data.military_service[0].unit;
         document.getElementById('military_service_1_period').innerHTML = data.military_service[0].period;
@@ -310,10 +318,11 @@
         document.getElementById('languages_hebrew').innerHTML = data.languages.hebrew;
         document.getElementById('languages_english').innerHTML = data.languages.english;
 
+        documneet.getElementById('programming').innerHTML = data.programming;
+        documneet.getElementById('programming').innerHTML = data.programming;
+
         document.getElementById('programSolid').innerHTML = data.anotherSkills.programSolid;
         document.getElementById('programOfices').innerHTML = data.anotherSkills.programOfices;
-        document.getElementById('codingJavaScript').innerHTML = data.anotherSkills.codingJavaScript;
-        document.getElementById('codingHTML').innerHTML = data.anotherSkills.codingHTML;
 
     </script>
 
