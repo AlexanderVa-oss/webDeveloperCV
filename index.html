@@ -89,6 +89,16 @@
         h5 {
             margin-left: 2mm;
         }
+
+        .programmingSkills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 2mm;
+        }
+
+        .programmingSkills-list li {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 
@@ -96,7 +106,7 @@
     <div class="a4-container">
         <div class="header">
             <h1 id="name"></h1>
-            <div class="contact-info">🪪
+            <div class="contact-info">
                 <p id="location"></p>
                 <p id="phone"></p>
                 <p id="email"></p>
@@ -192,12 +202,13 @@
                         <p class="description" id="military_service_2_service_type"></p>
                     </div>
                 </div>
-                <div>
+                <div class="section">
                     <h3>👨🏻‍💻 Programming Skills</h3>
                     <div class="section-content">
-                        <p class="description" id="programmingSkills"></p>
+                        <ul id="programmingSkills" class="programmingSkills-list"></ul>
                     </div>
                 </div>
+
                 <div class="section">
                     <h3>⚙️ Other Skills</h3>
                     <div class="section-content">
@@ -269,11 +280,17 @@
             languages: {
                 russian: 'Russian: Native speaker',
                 hebrew: "Hebrew: Fluent",
-                english: "English: Average, including technical"
+                english: "English: Average, including technical English."
             },
             programmingSkills: [
                 "JavaScript",
-                "HTML",
+                "HTML & CSS",
+                "NodeJs",
+                "React",
+                "MongoDB",
+                "MySQL",
+                "Git & GitHub",
+                "MUI"
             ],
             anotherSkills: {
                 programSolid: "SolidWorks",
@@ -325,7 +342,13 @@
         document.getElementById('languages_hebrew').innerHTML = data.languages.hebrew;
         document.getElementById('languages_english').innerHTML = data.languages.english;
 
-        document.getElementById('programmingSkills').innerHTML = data.programmingSkills.join(', ');
+        const programmingSkillsList = document.getElementById('programmingSkills');
+            data.programmingSkills.forEach(skill => {
+                const li = document.createElement('li');
+                li.textContent = skill;
+                programmingSkillsList.appendChild(li);
+            });
+
 
         document.getElementById('programSolid').innerHTML = data.anotherSkills.programSolid;
         document.getElementById('programOfices').innerHTML = data.anotherSkills.programOfices;
