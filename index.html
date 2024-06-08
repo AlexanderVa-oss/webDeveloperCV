@@ -48,12 +48,17 @@
             display: flex;
         }
 
+        .mainSection {
+            flex: 3;
+            margin-right: 20px;
+        }
+
         .section {
             margin-bottom: 5px;
         }
 
         .sideSection {
-            width: 220mm;
+            flex: 1;
             border: 1px solid #ccc;
             margin: 0 3mm 0 0;
             padding: 0 5mm 0 0;
@@ -113,7 +118,7 @@
                             <span id="education_2_period" style="margin-left: 2mm;"></span>
                         </p>
                         <p class="inlineText">
-                            <span>Diplom:</span>
+                            <span>Diploma:</span>
                             <span id="education_2_diplom" style="margin-left: 2mm;"></span>
                         </p>
                         <p class="inlineText">
@@ -126,7 +131,7 @@
                         <h3 class="job-title">My Projects:</h3>
                         <p><a href="https://github.com/AlexanderVa-oss">GitHub</a></p>
                         <p><a href="https://alexanderva-oss.github.io/hackeruPortfolio/">My portfolio</a></p>
-                        <p>Also i still work on my own web site. In privete repository</p>
+                        <p>Also I still work on my own website. In private repository</p>
                     </div>
                     <div class="section-content">
                         <p class="job-title" id="education_1_institution"></p>
@@ -135,7 +140,7 @@
                             <span id="education_1_period" style="margin-left: 2mm;"></span>
                         </p>
                         <p class="inlineText">
-                            <span>Diplom:</span>
+                            <span>Diploma:</span>
                             <span id="education_1_diplom" style="margin-left: 2mm;"></span>
                         </p>
                         <p class="inlineText">
@@ -167,7 +172,7 @@
 
             <div class="sideSection">
                 <div class="section">
-                    <h3>📚 languages</h3>
+                    <h3>📚 Languages</h3>
                     <div class='description'>
                         <h5 id="languages_russian"></h5>
                         <h5 id="languages_hebrew"></h5>
@@ -176,7 +181,7 @@
                 </div>
 
                 <div class="section">
-                    <h3>🪖 Military service</h3>
+                    <h3>🪖 Military Service</h3>
                     <div class="section-content">
                         <p class="job-title" id="military_service_1_unit"></p>
                         <p class="description" id="military_service_1_period"></p>
@@ -187,13 +192,17 @@
                         <p class="description" id="military_service_2_service_type"></p>
                     </div>
                 </div>
+                <div>
+                    <h3>👨🏻‍💻 Programming Skills</h3>
+                    <div class="section-content">
+                        <p class="description" id="programmingSkills"></p>
+                    </div>
+                </div>
                 <div class="section">
-                    <h3>⚙️ Other skills</h3>
+                    <h3>⚙️ Other Skills</h3>
                     <div class="section-content">
                         <p class="description" id="programOfices"></p>
                         <p class="description" id="programSolid"></p>
-                        <p class="description" id="codingJavaScript"></p>
-                        <p class="description" id="codingHTML"></p>
                     </div>
                 </div>
             </div>
@@ -210,19 +219,18 @@
             },
             professionalProfile: {
                 professionalProfile: 'PROFILE',
-                professionalProfileDescription: "As a fresh graduate from HackerU Academy, I'm eager to dive into the tech world and showcase my hard- earned skills.My journey has equipped me with expertise in HTML, CSS, React, JavaScript, SQL, NodeJS, Bootstrap, WordPress, and MUI.With a passion for coding and a knack for creative problem- solving, I'm ready to contribute to innovative projects and make a significant impact.",
+                professionalProfileDescription: "As a fresh graduate from HackerU Academy, I'm eager to dive into the tech world and showcase my hard-earned skills. My journey has equipped me with expertise in HTML, CSS, React, JavaScript, SQL, NodeJS, Bootstrap, WordPress, and MUI. With a passion for coding and a knack for creative problem-solving, I'm ready to contribute to innovative projects and make a significant impact.",
             },
             work_experience: [
                 {
                     company: "Utron",
-                    period: "Match 2024 - Junny 2024",
+                    period: "March 2024 - June 2024",
                     description: "Support for a period of three months in the development of automatic trailers"
                 },
                 {
                     company: "Shemesh Automation",
-                    period: "July 2018 - 2023 July",
-                    description:
-                        "In my role within the industrial machinery development environment, I specialized in delivering final products tailored to meet client specifications and deadlines. Responsibilities encompassed identifying and resolving development issues, ensuring the seamless operation and maintenance of products post-deployment. Proactive approach to troubleshooting and commitment to excellence have been pivotal in maintaining high standards of product quality and client satisfaction."
+                    period: "July 2018 - July 2023",
+                    description: "In my role within the industrial machinery development environment, I specialized in delivering final products tailored to meet client specifications and deadlines. Responsibilities encompassed identifying and resolving development issues, ensuring the seamless operation and maintenance of products post-deployment. Proactive approach to troubleshooting and commitment to excellence have been pivotal in maintaining high standards of product quality and client satisfaction."
                 },
                 {
                     company: "FLEX",
@@ -234,36 +242,35 @@
             {
                 institution: "Ort Rehovot",
                 period: "2015 - 2018",
-                diplom: "Mechanical Engenering",
+                diplom: "Mechanical Engineering",
                 degree: "Mechanical engineer certificate holder.",
                 description: ""
             },
             educationHackerU:
             {
                 institution: "HackerU, Ramat-Gan",
-                period: "July 2023 - Marrch 2024",
+                period: "July 2023 - March 2024",
                 diplom: "Web Developer",
                 degree: "98",
-                description: "My academic journey at HackerU has been an intensive and enriching experience, focusing on cutting- edge technologies and programming languages.I have honed my skills in JavaScript, NodeJS, React, HTML, CSS, Bootstrap, WordPress, and MUI through rigorous coursework.My portfolio, showcasing multiple projects, is a testament to my practical application of these skills(Check my projects below).With a GPA of 98, my academic record reflects my dedication and mastery in the field of technology."
+                description: "My academic journey at HackerU has been an intensive and enriching experience, focusing on cutting-edge technologies and programming languages. I have honed my skills in JavaScript, NodeJS, React, HTML, CSS, Bootstrap, WordPress, and MUI through rigorous coursework. My portfolio, showcasing multiple projects, is a testament to my practical application of these skills. With a GPA of 98, my academic record reflects my dedication and mastery in the field of technology."
             },
             military_service: [
                 {
                     unit: "Paratroopers unit 890",
-                    period: "2011 - 2008",
-                    service_type: "permanent service"
+                    period: "2008 - 2011",
+                    service_type: "Permanent service"
                 },
                 {
                     unit: "Paratroopers unit 890",
-                    period: "2008 - 2005",
-                    service_type: "regular service"
+                    period: "2005 - 2008",
+                    service_type: "Regular service"
                 }
             ],
             languages: {
                 russian: 'Russian: Native speaker',
                 hebrew: "Hebrew: Fluent",
-                english: "English: average, including technical"
+                english: "English: Average, including technical"
             },
-            programming: 'programming',
             programmingSkills: [
                 "JavaScript",
                 "HTML",
@@ -318,8 +325,7 @@
         document.getElementById('languages_hebrew').innerHTML = data.languages.hebrew;
         document.getElementById('languages_english').innerHTML = data.languages.english;
 
-        documneet.getElementById('programming').innerHTML = data.programming;
-        documneet.getElementById('programming').innerHTML = data.programming;
+        document.getElementById('programmingSkills').innerHTML = data.programmingSkills.join(', ');
 
         document.getElementById('programSolid').innerHTML = data.anotherSkills.programSolid;
         document.getElementById('programOfices').innerHTML = data.anotherSkills.programOfices;
