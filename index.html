@@ -83,7 +83,6 @@
 
         .inlineText {
             display: flex;
-            margin-left: 10px;
         }
 
         h5 {
@@ -108,7 +107,6 @@
             <h1 id="name"></h1>
             <h2 id="role" style="text-align: center;"></h2>
             <div class="contact-info">
-                <p id="location"></p>
                 <p id="phone"></p>
                 <p id="email"></p>
                 <div class="section">
@@ -121,7 +119,7 @@
         <div class="pageSection">
             <div class="mainSection">
                 <div class="section">
-                    <h2>🏫 EDUCATION</h2>
+                    <h2>EDUCATION</h2>
                     <div class="section-content">
                         <p class="job-title" id="education_2_institution"></p>
                         <p class="inlineText">
@@ -163,7 +161,7 @@
                 </div>
 
                 <div class="section">
-                    <h2>💼 EMPLOYMENT HISTORY</h2>
+                    <h2>EMPLOYMENT HISTORY</h2>
                     <div class="section-content">
                         <p class="job-title" id="work_experience_1_company"></p>
                         <p id="work_experience_1_period"></p>
@@ -183,7 +181,7 @@
 
             <div class="sideSection">
                 <div class="section">
-                    <h3>📚 Languages</h3>
+                    <h3>Languages</h3>
                     <div class='description'>
                         <h5 id="languages_russian"></h5>
                         <h5 id="languages_hebrew"></h5>
@@ -192,7 +190,7 @@
                 </div>
 
                 <div class="section">
-                    <h3>🪖 Military Service</h3>
+                    <h3>Military Service</h3>
                     <div class="section-content">
                         <p class="job-title" id="military_service_1_unit"></p>
                         <p class="description" id="military_service_1_period"></p>
@@ -204,17 +202,24 @@
                     </div>
                 </div>
                 <div class="section">
-                    <h3>👨🏻‍💻 Programming Skills</h3>
+                    <h3>Programming Skills</h3>
                     <div class="section-content">
                         <ul id="programmingSkills" class="programmingSkills-list"></ul>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h3>⚙️ Other Skills</h3>
+                    <h3>Other Skills</h3>
                     <div class="section-content">
                         <p class="description" id="programOfices"></p>
                         <p class="description" id="programSolid"></p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Social</h3>
+                    <div class="section-content">
+                        <p class="description"><a href="https://www.linkedin.com/in/sasha-k-1a358120a/" target="_blank">linkedin</a></p>
                     </div>
                 </div>
             </div>
@@ -223,12 +228,11 @@
 
     <script>
         const data = {
-            name: "Alexander Kukushkin 🎗️",
+            name: "Alexander Kukushkin",
             role: "FULLSTACK DEVELOPER",
             contact: {
-                location: "🏢 Holon",
-                phone: "📞 054-2094669",
-                email: "📧 kukushkinalex@gmail.com"
+                phone: "054-2094669",
+                email: "kukushkinalex@gmail.com"
             },
             professionalProfile: {
                 professionalProfile: 'PROFILE',
@@ -302,7 +306,7 @@
 
         document.getElementById('name').innerHTML = data.name;
         document.getElementById('role').innerHTML = data.role;
-        document.getElementById('location').innerHTML = data.contact.location;
+
         document.getElementById('phone').innerHTML = data.contact.phone;
         document.getElementById('email').innerHTML = data.contact.email;
 
@@ -345,6 +349,8 @@
         document.getElementById('languages_hebrew').innerHTML = data.languages.hebrew;
         document.getElementById('languages_english').innerHTML = data.languages.english;
 
+        document.getElementById('languages_english').innerHTML = data.languages.english;
+
         const programmingSkillsList = document.getElementById('programmingSkills');
             data.programmingSkills.forEach(skill => {
                 const li = document.createElement('li');
@@ -354,8 +360,6 @@
 
 
         document.getElementById('programSolid').innerHTML = data.anotherSkills.programSolid;
-        document.getElementById('programOfices').innerHTML = data.anotherSkills.programOfices;
-
     </script>
 
 </body>
